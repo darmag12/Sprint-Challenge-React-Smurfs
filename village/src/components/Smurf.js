@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 const Smurf = props => {
   return (
@@ -6,6 +7,7 @@ const Smurf = props => {
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
       <p>{props.age} smurf years old</p>
+      
     </div>
   );
 };
@@ -13,7 +15,9 @@ const Smurf = props => {
 Smurf.defaultProps = {
   name: '',
   height: '',
-  age: ''
+  age: '',
+  
+  
 };
 
 export default Smurf;
