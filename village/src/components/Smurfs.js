@@ -11,6 +11,7 @@ class Smurfs extends Component {
         <ul>
           {this.props.smurfs.map(smurf => {
             return (
+              <div>
              <Route exact path='/smurf' render={ props => <Smurf
                 {...props}
                 name={smurf.name}
@@ -20,6 +21,7 @@ class Smurfs extends Component {
                 // img={Logo}
                 key={smurf.id}
              />}/>
+             </div>
             );
           })}
         </ul>

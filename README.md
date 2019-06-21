@@ -37,7 +37,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [x] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 * C-Post, R-Get, U-Put, D-Delete
 - [x] Mention three tools we can use to make AJAX requests.
-* axios, HTTP methods, Promises
+* axios, HTTP methods, Fetch
 
 
 

@@ -5,6 +5,7 @@ class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: '',
       name: '',
       age: '',
       height: ''
@@ -17,6 +18,7 @@ class SmurfForm extends Component {
     this.props.addSmurf(event, this.state)
 
     this.setState({
+      id: Date.now(),
       name: '',
       age: '',
       height: ''

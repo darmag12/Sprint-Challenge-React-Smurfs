@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
-import { get } from 'http';
 import axios from 'axios'
 import { Route, withRouter } from 'react-router-dom'
 import  Navigation  from './components/Navigation';
