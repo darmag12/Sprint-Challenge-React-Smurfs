@@ -7,6 +7,7 @@ import { get } from 'http';
 import axios from 'axios'
 import { Route, withRouter } from 'react-router-dom'
 import  Navigation  from './components/Navigation';
+import Home from './components/Home'
 
 
 class App extends Component {
@@ -51,8 +52,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
         <h1 className='header'>Smurf Village</h1>
+        <Navigation />
+        <Route exact path='/' component={Home}/>
         <Route exact path='/smurf-form' render={props => <SmurfForm {...props} addSmurf={this.addSmurf}/>} />
        <Route path='/smurf' render={ props => <Smurfs {...props} smurfs={this.state.smurfs} />} />
       </div>

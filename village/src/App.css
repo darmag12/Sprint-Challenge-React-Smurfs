@@ -119,3 +119,6 @@
 .btn-add:hover{
   box-shadow: 5px 5px 5px rgba(162, 209, 248, 0.719);
 }
+.smurf-img{
+  width: 50%;
+}
