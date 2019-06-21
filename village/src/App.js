@@ -5,7 +5,7 @@ import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import { get } from 'http';
 import axios from 'axios'
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import  Navigation  from './components/Navigation';
 
 
@@ -41,22 +41,24 @@ class App extends Component {
       this.setState({
         smurfs: res.data
       })
-      this.props.history.push('/smurfs')
+
+      this.props.history.push('/smurf')
     })
     .catch(err => {
-      console.log(err)
+      console.log('Post err',err)
     })
   }
   render() {
     return (
       <div className="App">
         <Navigation />
-        <h1>Smurf Village</h1>
+        <h1 className='header'>Smurf Village</h1>
         <Route exact path='/smurf-form' render={props => <SmurfForm {...props} addSmurf={this.addSmurf}/>} />
-        <Smurfs smurfs={this.state.smurfs} />
+       <Route path='/smurf' render={ props => <Smurfs {...props} smurfs={this.state.smurfs} />} />
       </div>
     );
   }
 }
 
-export default App;
+const AppWithRouter = withRouter(App);
+export default AppWithRouter;

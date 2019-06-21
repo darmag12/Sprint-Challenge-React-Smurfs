@@ -7,11 +7,11 @@ import { Route } from 'react-router-dom'
 class Smurfs extends Component {
   render() {
     return (
-      <div className="Smurfs">
+      <div className="smurfs">
         <ul>
           {this.props.smurfs.map(smurf => {
             return (
-             <Route exact path='/' render={ props => <Smurf
+             <Route exact path='/smurf' render={ props => <Smurf
                 {...props}
                 name={smurf.name}
                 id={smurf.id}
